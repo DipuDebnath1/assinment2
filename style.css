@@ -165,6 +165,9 @@ nav ul li a{
     gap: 1rem;
     text-align: left;
 }
+.video{
+    transition: .3s all ease;
+}
 .image{
     position: relative;
 
@@ -189,17 +192,18 @@ nav ul li a{
     flex-direction: column-reverse;
     gap: 10px;
     visibility: hidden;
+    opacity: 0;
     background-color: #0b022398;
-    height: calc(100% - 2px);
-    width: calc(100% - 2px);
+    height:97%;
+    width: calc(100% - 3px);
     align-items: center;
     justify-content: center;
     border-radius: 8px;
     border: 2px solid var(--primary-color);
 }
 .video:hover .play-now{
+    opacity: 1;
     visibility: visible;
-
 }
 
 /* .play-instently */
@@ -348,6 +352,10 @@ footer p{
 }
 .button-section > button img{
     height: 2rem;
+}
+.button-section>button{
+    flex-basis: 30%;
+    font-size: .6rem;
 }
 .image img{
     width: 100%;
