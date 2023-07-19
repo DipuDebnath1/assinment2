@@ -172,6 +172,9 @@ nav ul li a{
     position: relative;
 
 }
+.video p{
+    padding: 10px;
+}
 .play-now i{
     font-size: 30px;
     color: #fff;
