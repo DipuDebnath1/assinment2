@@ -90,7 +90,7 @@ nav ul li a{
     gap: 5px;
     font-size: var(--name);
 }
-.fa-youtube{
+.youtube{
     color: #F61C0D;
     font-size: 1.3rem;
 }
@@ -190,8 +190,8 @@ nav ul li a{
     gap: 10px;
     visibility: hidden;
     background-color: #0b022398;
-    height: 97%;
-    width: 99%;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
     align-items: center;
     justify-content: center;
     border-radius: 8px;
@@ -239,22 +239,9 @@ nav ul li a{
     max-width: 80%;
 }
 
-/* button section  */
-/* .a{grid-area: a;}
-.b{grid-area: b;}
-.c{grid-area: c;}
-.d{grid-area: d;}
-.e{grid-area: e;}
-.f{grid-area: f;}
-.g{grid-area: g;}
-.h{grid-area: h;} */
 
 .button-section{
     padding: 5%;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-items:;
-    gap: 1rem; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -267,9 +254,53 @@ nav ul li a{
     background: none;
     gap: 10px;
     flex-basis: 20%;
-    }
+    font-size:1rem;
+    border-radius: 50px;
+    transition: .3s all ease;
+}
 .button-section > button img{
     height: 2.5rem;
+}
+
+.button-section>button:hover{
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* footer */
+footer{
+    padding:5% 15%;
+    text-align:center;
+    background: #0B0223;
+}
+.footer-title h2{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: white;
+
+}
+footer .link{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 2rem 0;
+}
+footer .link:last-child li a{
+    font-size: 2rem;
+}
+footer .link li a{
+    color: var(--background-color);
+}
+.menu{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.menu li a,footer p{
+    color: rgba(255, 255, 255, 0.60);
+}
+footer p{
+    margin-top: 2rem;
 }
 
 /* table view  */
@@ -289,6 +320,10 @@ nav ul li a{
     }
     .videos{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .button-section>button{
+        flex-basis: 25%;
+        font-size: .6rem;
     }
 }
 /* mobile view  */
@@ -311,5 +346,23 @@ nav ul li a{
    .videos{
     grid-template-columns: repeat(1, 1fr);
 }
-    
+.button-section > button img{
+    height: 2rem;
+}
+.image img{
+    width: 100%;
+}
+.play-now{
+    height: 99%;
+}
+footer{
+    padding: 5%;
+}
+footer .link{
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+.menu{
+    grid-template-columns: repeat(2,1fr);
+}
 }
